@@ -1,6 +1,15 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Saira', sans-serif;
   text-align: center;
+  background-color: #faf8ef; /* NYT Wordle-like background */
+  color: #776e65; /* NYT Wordle-like text color */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 #crossword-grid {
@@ -13,12 +22,14 @@ body {
 .cell {
   width: 40px;
   height: 40px;
-  border: 1px solid #000;
+  border: 2px solid #d3d6da; /* NYT Wordle-like border color */
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  background-color: #f9f9f9;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: #ffffff; /* White cells */
+  color: #000000; /* Black text */
 }
 
 .cell:focus {
@@ -28,9 +39,23 @@ body {
 
 #clues {
   margin-top: 20px;
+  max-width: 600px;
+  text-align: left;
 }
 
 #clues ul {
   list-style-type: none;
   padding: 0;
+}
+
+#clues li {
+  margin: 10px 0;
+  font-size: 16px;
+  color: #776e65; /* NYT Wordle-like text color */
+}
+
+h1 {
+  font-size: 36px;
+  color: #776e65; /* NYT Wordle-like text color */
+  margin-bottom: 20px;
 }
