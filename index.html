@@ -26,17 +26,18 @@
 
         <section class="crossword-area">
             <div class="crossword-container">
-                <div id="crossword-container">
-                    <div class="grid">
-                        </div>
-                    <div class="clues">
-                        </div>
+                <div id="crossword-grid" class="grid"></div> <!-- Fixed grid container -->
+                <div class="clues">
+                    <h3>Across</h3>
+                    <ul id="across-clues"></ul>
+                    <h3>Down</h3>
+                    <ul id="down-clues"></ul>
                 </div>
             </div>
 
             <div class="controls">
-                <button>Check</button>
-                <button>Clear</button>
+                <button id="check-btn">Check</button>
+                <button id="clear-btn">Clear</button>
             </div>
         </section>
     </main>
