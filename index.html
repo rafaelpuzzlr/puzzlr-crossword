@@ -3,50 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spelling Bee</title>
+    <title>Crosswords by Puzzlr</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="header">
-        <div class="title-date">
-            <h1>Spelling Bee</h1>
-            <p>February 4, 2025</p>
-            <p>Edited by Sam Ezersky</p>
+    <header>
+        <div class="header-content">  <h1>Crosswords by Puzzlr</h1>
+          <nav>
+              <a href="#">How to Play</a>
+              <a href="#">About</a>
+          </nav>
         </div>
-        <div class="nav-links">
-            <a href="#">Stats</a>
-            <a href="#">Play Yesterday's Puzzle</a>
-            <a href="#">Hints</a>
-            <a href="#">More</a>
-        </div>
-    </div>
+    </header>
 
-    <div class="game-area">
-        <div class="hex-container">
-            <div class="hexagon">A</div>
-            <div class="hexagon">H</div>
-            <div class="hexagon">L</div>
-            <div class="hexagon">F</div>
-            <div class="hexagon">T</div>
-            <div class="hexagon">U</div>
-            <div class="hexagon">E</div>
-        </div>
+    <main>
+        <section class="instructions">
+            <h2>Instructions</h2>
+            <p>Select a square to start entering your word. Use the arrow keys to navigate, or click on a square to select it. Type letters to fill in the grid. Click "Check" to check your progress.</p>
+        </section>
 
-        <div class="input-area">
-            <p>Type or Click</p>
-            <div class="word-display"></div>
-            <div class="buttons">
-                <button>Delete</button>
-                <button>Enter</button>
+        <section class="crossword-area">
+            <div class="crossword-container">
+                <div class="grid">
+                    <div class="row">
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                        <div class="cell"></div>
+                    </div>
+                    </div>
             </div>
-        </div>
 
-        <div class="score">
-            <p>Beginner</p>
-            <p>You have found 0 words</p>
-        </div>
-    </div>
+            <div class="controls">
+                <button>Check</button>
+                <button>Clear</button>
+            </div>
+        </section>
 
-    <script src="script.js"></script> </body>
+        <aside class="clues">
+            <h2>Across</h2>
+            <ul>
+                <li>1. A small furry animal (4)</li>
+                </ul>
+            <h2>Down</h2>
+            <ul>
+                <li>1. Opposite of black (5)</li>
+                </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Puzzlr</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
