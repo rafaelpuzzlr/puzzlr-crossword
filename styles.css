@@ -9,8 +9,8 @@ body {
 }
 
 header {
-    background-color: black;
-    color: white;
+    background-color: #f0f0f0; /* Changed back to original */
+    color: black;
     padding: 20px;
     text-align: center;
     font-size: 24px;
