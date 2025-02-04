@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const gridSize = 10; // 10x10 grid
+    const gridSize = 10;
     const grid = document.getElementById("crossword-grid");
     const acrossClues = document.getElementById("across-clues");
     const downClues = document.getElementById("down-clues");
@@ -15,9 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     };
 
-    // Create the crossword grid
     function createGrid() {
-        grid.innerHTML = ""; // Clear existing grid
+        grid.innerHTML = "";
         for (let row = 0; row < gridSize; row++) {
             for (let col = 0; col < gridSize; col++) {
                 const cell = document.createElement("div");
@@ -30,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Populate the grid with answers
     function populateGrid() {
         for (const direction in crosswordData) {
             for (const number in crosswordData[direction]) {
@@ -47,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Display clues
     function displayClues() {
         acrossClues.innerHTML = "";
         downClues.innerHTML = "";
@@ -66,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Event listener for the "Check" button
     document.getElementById("check-btn").addEventListener("click", function () {
         document.querySelectorAll(".cell").forEach(cell => {
             const correctAnswer = cell.getAttribute("data-answer");
@@ -76,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Event listener for the "Clear" button
     document.getElementById("clear-btn").addEventListener("click", function () {
         document.querySelectorAll(".cell").forEach(cell => {
             cell.textContent = "";
@@ -84,7 +79,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
-    // Initialize game
     function init() {
         createGrid();
         populateGrid();
@@ -93,3 +87,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
     init();
 });
+
