@@ -8,17 +8,17 @@ body {
 }
 
 header {
-    background-color: #f0f0f0; /* Light gray background for header */
+    background-color: #f0f0f0;
     padding: 20px;
-    text-align: center; /* Center the header content */
+    text-align: center;
 }
 
 .header-content {
     display: flex;
-    justify-content: space-between; /* Align items to left and right */
+    justify-content: space-between;
     align-items: center;
-    max-width: 900px; /* Set a maximum width */
-    margin: 0 auto; /* Center the header content horizontally */
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 nav {
@@ -28,41 +28,44 @@ nav {
 
 main {
     display: flex;
-    flex-grow: 1; /* Allow main to take up available space */
+    flex-grow: 1;
     padding: 20px;
-    max-width: 900px; /* Limit width of content */
-    margin: 0 auto; /* Center content horizontally */
+    max-width: 900px;
+    margin: 0 auto;
 }
 
 .instructions {
-    flex: 1; /* Instructions take up available space */
-    margin-right: 20px; /* Space between instructions and grid */
+    flex: 1;
+    margin-right: 20px;
 }
 
 .crossword-area {
-    flex: 1; /* Crossword area takes up available space */
+    flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center the grid horizontally */
+    align-items: center;
 }
 
 .crossword-container {
-    /* Styles for your existing crossword grid container */
-    border: 1px solid black; /* Example border */
-    /* ... other styles ... */
+    /* Adjust these styles to fit your grid */
+    border: 1px solid black;
+    /* Example: */
+    width: 400px; /* Or whatever width your grid needs */
+    /* height: 300px;  If you need a fixed height */
+}
+
+.grid {
+    /* Styles for the grid cells, rows, etc. */
+}
+
+.clues {
+    /* Styles for the clues */
 }
 
 .controls {
     margin-top: 20px;
     display: flex;
     gap: 10px;
-}
-
-.clues {
-    flex: 1; /* Clues take up available space */
-    margin-left: 20px; /* Space between grid and clues */
-    border: 1px solid #ccc; /* Add a border */
-    padding: 10px;
 }
 
 footer {
@@ -75,10 +78,10 @@ footer {
 /* Responsive design (example) */
 @media (max-width: 768px) {
     main {
-        flex-direction: column; /* Stack instructions, grid, and clues vertically */
+        flex-direction: column;
     }
 
     .instructions, .clues {
-        margin: 10px 0; /* Adjust margins for stacked layout */
+        margin: 10px 0;
     }
 }
