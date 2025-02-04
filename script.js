@@ -1,10 +1,13 @@
-// 1. Get the grid container element.
-const gridContainer = document.querySelector('.grid');
+// script.js
 
-// 2. (This is the most crucial part - replace with your actual grid generation logic)
-// Example:  Create a 10x10 grid (replace with your actual grid creation)
+// 1. Get the container for the crossword
+const crosswordContainer = document.getElementById('crossword-container');
+
+// 2. YOUR ORIGINAL CROSSWORD GRID GENERATION CODE GOES HERE
+//    (This is the code that creates the grid's HTML)
+//    Example (replace with your actual code):
 let gridHTML = "";
-for (let i = 0; i < 10; i++) {
+for (let i = 0; i < 10; i++) { // Example loop - replace with yours
     gridHTML += "<div class='row'>";
     for (let j = 0; j < 10; j++) {
         gridHTML += "<div class='cell'></div>";
@@ -12,7 +15,8 @@ for (let i = 0; i < 10; i++) {
     gridHTML += "</div>";
 }
 
-gridContainer.innerHTML = gridHTML;
+// 3. Insert the generated grid HTML into the container
+crosswordContainer.innerHTML = gridHTML;
 
 
 // Sample data for words and clues
