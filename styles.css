@@ -1,91 +1,84 @@
+/* Basic styles */
 body {
     font-family: sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
-    align-items: center;
     min-height: 100vh;
-    justify-content: flex-start; /* Align to top for header */
 }
 
-.header {
+header {
+    background-color: #f0f0f0; /* Light gray background for header */
+    padding: 20px;
+    text-align: center; /* Center the header content */
+}
+
+.header-content {
     display: flex;
-    justify-content: space-between; /* Space header items */
-    align-items: center; /* Vertically center */
-    width: 90%; /* Occupy most of the width */
-    max-width: 800px; /* Set a maximum width */
+    justify-content: space-between; /* Align items to left and right */
+    align-items: center;
+    max-width: 900px; /* Set a maximum width */
+    margin: 0 auto; /* Center the header content horizontally */
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+}
+
+main {
+    display: flex;
+    flex-grow: 1; /* Allow main to take up available space */
+    padding: 20px;
+    max-width: 900px; /* Limit width of content */
+    margin: 0 auto; /* Center content horizontally */
+}
+
+.instructions {
+    flex: 1; /* Instructions take up available space */
+    margin-right: 20px; /* Space between instructions and grid */
+}
+
+.crossword-area {
+    flex: 1; /* Crossword area takes up available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the grid horizontally */
+}
+
+.crossword-container {
+    /* Styles for your existing crossword grid container */
+    border: 1px solid black; /* Example border */
+    /* ... other styles ... */
+}
+
+.controls {
     margin-top: 20px;
-}
-
-.title-date {
-    text-align: left; /* Align title and date to the left */
-}
-
-.nav-links {
-    display: flex;
-    gap: 20px; /* Spacing between links */
-}
-
-.game-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-}
-
-.hex-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 5px;
-    margin-bottom: 20px; /* Space before input area */
-}
-
-.hexagon {
-    width: 60px; /* Adjust size as needed */
-    height: 69.28px; /* Maintain aspect ratio (height = width * 1.155) */
-    background-color: #eee; /* Light gray */
-    border: 1px solid #ccc; /* Subtle border */
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    cursor: pointer;
-    user-select: none; /* Prevent text selection */
-}
-
-.input-area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.word-display {
-    font-size: 20px;
-    margin-bottom: 10px;
-}
-
-.buttons {
     display: flex;
     gap: 10px;
 }
 
-.score {
-    margin-top: 20px;
+.clues {
+    flex: 1; /* Clues take up available space */
+    margin-left: 20px; /* Space between grid and clues */
+    border: 1px solid #ccc; /* Add a border */
+    padding: 10px;
 }
 
-/* Responsive adjustments */
-@media (max-width: 600px) {
-    .hexagon {
-        width: 50px;
-        height: 57.74px;
-        font-size: 20px;
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive design (example) */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column; /* Stack instructions, grid, and clues vertically */
     }
 
-    .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        align-items: center; /* Center horizontally */
-        gap: 10px;
+    .instructions, .clues {
+        margin: 10px 0; /* Adjust margins for stacked layout */
     }
 }
