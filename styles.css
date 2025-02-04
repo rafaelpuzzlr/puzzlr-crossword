@@ -1,16 +1,20 @@
-/* Basic styles */
+/* General Styles */
 body {
-    font-family: sans-serif;
+    font-family: 'Arial', sans-serif;
     margin: 0;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #f8f8f8;
 }
 
 header {
-    background-color: #f0f0f0;
+    background-color: black;
+    color: white;
     padding: 20px;
     text-align: center;
+    font-size: 24px;
+    font-weight: bold;
 }
 
 .header-content {
@@ -37,6 +41,9 @@ main {
 .instructions {
     flex: 1;
     margin-right: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 .crossword-area {
@@ -46,42 +53,48 @@ main {
     align-items: center;
 }
 
+/* Crossword Grid */
 .crossword-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 1px solid black;
+    border: 2px solid #000;
     padding: 10px;
+    background-color: white;
 }
 
-/* Updated grid styles */
 .grid {
     display: grid;
-    grid-template-columns: repeat(10, 30px);
-    grid-template-rows: repeat(10, 30px);
+    grid-template-columns: repeat(10, 40px);
+    grid-template-rows: repeat(10, 40px);
     gap: 2px;
     margin: 10px auto;
-    background-color: #fff;
 }
 
 .cell {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border: 1px solid black;
     text-align: center;
-    font-size: 20px;
+    font-size: 24px;
     text-transform: uppercase;
+    font-weight: bold;
     background-color: white;
     cursor: pointer;
 }
 
 .cell:focus {
     background-color: #d3d3d3;
-    outline: none;
+    outline: 2px solid blue;
+}
+
+.cell[data-answer] {
+    background-color: #eee;
 }
 
 .clues {
     margin-top: 20px;
+    font-size: 18px;
 }
 
 .controls {
@@ -91,21 +104,31 @@ main {
 }
 
 button {
-    padding: 10px 15px;
+    padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
+    border: none;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: gray;
 }
 
 footer {
-    background-color: #333;
+    background-color: black;
     color: white;
     text-align: center;
     padding: 10px;
 }
 
-/* Responsive design */
+/* Responsive Design */
 @media (max-width: 768px) {
     main {
         flex-direction: column;
     }
 }
+
