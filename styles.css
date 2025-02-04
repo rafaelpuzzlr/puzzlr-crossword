@@ -5,7 +5,7 @@ body {
   background-color: #faf8ef; /* NYT Wordle-like background */
   color: #776e65; /* NYT Wordle-like text color */
   margin: 0;
-  padding: 0;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -37,17 +37,36 @@ h1 {
   font-weight: bold;
   background-color: #ffffff; /* White cells */
   color: #000000; /* Black text */
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 .cell:focus {
   outline: none;
+  border-color: #776e65; /* Highlight selected cell */
   background-color: #e0f7fa;
+}
+
+.cell.correct {
+  background-color: #6aaa64; /* Green for correct letters */
+  color: #ffffff;
+}
+
+.cell.incorrect {
+  background-color: #c9b458; /* Yellow for incorrect letters */
+  color: #ffffff;
 }
 
 #clues {
   margin-top: 20px;
   max-width: 600px;
   text-align: left;
+}
+
+#clues h3 {
+  font-size: 20px;
+  color: #776e65;
+  margin-bottom: 10px;
 }
 
 #clues ul {
@@ -60,3 +79,7 @@ h1 {
   font-size: 16px;
   color: #776e65; /* NYT Wordle-like text color */
 }
+
+#clues li.active {
+  font-weight: bold;
+  color: #000000; /* Highlight active clue
