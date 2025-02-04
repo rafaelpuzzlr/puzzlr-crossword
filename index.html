@@ -1,26 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Crossword by Puzzlr</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Saira:wght@400;700&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spelling Bee</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Crossword by Puzzlr</h1>
-  <div id="crossword-grid"></div>
-  <div id="clues">
-    <h2>Clues</h2>
-    <div>
-      <h3>Across</h3>
-      <ul id="across-clues"></ul>
+
+    <div class="header">
+        <div class="title-date">
+            <h1>Spelling Bee</h1>
+            <p>February 4, 2025</p>
+            <p>Edited by Sam Ezersky</p>
+        </div>
+        <div class="nav-links">
+            <a href="#">Stats</a>
+            <a href="#">Play Yesterday's Puzzle</a>
+            <a href="#">Hints</a>
+            <a href="#">More</a>
+        </div>
     </div>
-    <div>
-      <h3>Down</h3>
-      <ul id="down-clues"></ul>
+
+    <div class="game-area">
+        <div class="hex-container">
+            <div class="hexagon">A</div>
+            <div class="hexagon">H</div>
+            <div class="hexagon">L</div>
+            <div class="hexagon">F</div>
+            <div class="hexagon">T</div>
+            <div class="hexagon">U</div>
+            <div class="hexagon">E</div>
+        </div>
+
+        <div class="input-area">
+            <p>Type or Click</p>
+            <div class="word-display"></div>
+            <div class="buttons">
+                <button>Delete</button>
+                <button>Enter</button>
+            </div>
+        </div>
+
+        <div class="score">
+            <p>Beginner</p>
+            <p>You have found 0 words</p>
+        </div>
     </div>
-  </div>
-  <script src="script.js"></script>
-</body>
+
+    <script src="script.js"></script> </body>
 </html>
